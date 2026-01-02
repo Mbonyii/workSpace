@@ -1,0 +1,30 @@
+package com.varol.WellPass_Mananagement_System.dtos.request.billing;
+
+import java.math.BigDecimal;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PaymentRequest {
+
+    @NotNull(message = "Invoice ID is required")
+    private Long invoiceId;
+
+    @NotNull(message = "Amount is required")
+    @Positive(message = "Amount must be positive")
+    private BigDecimal amount;
+
+    @NotBlank(message = "Payment method is required")
+    private String paymentMethod;
+
+    private String transactionId;
+
+    private String notes;
+}
