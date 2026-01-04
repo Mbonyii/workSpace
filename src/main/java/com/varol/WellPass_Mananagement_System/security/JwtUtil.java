@@ -1,4 +1,4 @@
-package com.varol.WellPass_Mananagement_System.config;
+package com.varol.WellPass_Mananagement_System.security;
 
 
 
@@ -44,7 +44,7 @@ public class JwtUtil {
         return claimsResolver.apply(claims);
     }
 
-    private Claims extractAllClaims(String token) {
+    public Claims extractAllClaims(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(getSigningKey())
                 .build()
