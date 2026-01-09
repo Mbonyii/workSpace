@@ -29,10 +29,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "attendance", indexes = {
-    @Index(name = "idx_employee_id", columnList = "employee_id"),
-    @Index(name = "idx_company_id", columnList = "company_id"),
-    @Index(name = "idx_service_provider_id", columnList = "service_provider_id"),
-    @Index(name = "idx_check_in_time", columnList = "check_in_time")
+        @Index(name = "idx_attendance_employee_id", columnList = "employee_id"),
+        @Index(name = "idx_attendance_company_id", columnList = "company_id"),
+        @Index(name = "idx_attendance_service_provider_id", columnList = "service_provider_id"),
+        @Index(name = "idx_attendance_check_in_time", columnList = "check_in_time")
 })
 public class Attendance extends BaseEntity {
 

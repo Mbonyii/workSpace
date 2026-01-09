@@ -25,9 +25,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "otp_verification", indexes = {
-    @Index(name = "idx_employee_id", columnList = "employee_id"),
-    @Index(name = "idx_otp_code", columnList = "otp_code"),
-    @Index(name = "idx_expires_at", columnList = "expires_at")
+        @Index(name = "idx_otp_employee_id", columnList = "employee_id"),
+        @Index(name = "idx_otp_code", columnList = "otp_code"),
+        @Index(name = "idx_otp_expires_at", columnList = "expires_at")
 })
 public class OTPVerification extends BaseEntity {
 

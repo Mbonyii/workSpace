@@ -30,9 +30,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "invoices", indexes = {
-    @Index(name = "idx_company_id", columnList = "company_id"),
-    @Index(name = "idx_invoice_number", columnList = "invoice_number"),
-    @Index(name = "idx_status", columnList = "status")
+        @Index(name = "idx_invoice_company_id", columnList = "company_id"),
+        @Index(name = "idx_invoice_number", columnList = "invoice_number"),
+        @Index(name = "idx_invoice_status", columnList = "status")
 })
 public class Invoice extends BaseEntity {
 
